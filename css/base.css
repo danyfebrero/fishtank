@@ -29,14 +29,18 @@ nav a {
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-weight: bold;
+	
+}
+.nav-links a{
 	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
 }
 img {
 	max-width: 100%;
 }
 nav{
     display: flex;
-	
 	align-items: center;
 	justify-content: center;
 	height: 50px;
@@ -45,11 +49,15 @@ nav{
 	
 }
 .logo{
-	
+	display: flex;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 20px;
 	
+}
+.logo img{
+	visibility: hidden;
+	margin-right: 5px;
 }
 .nav-links{
 	position: fixed;
@@ -237,26 +245,45 @@ nav-links li{
 
 @media only screen and (min-width: 640px) {
 	/*		Style		*/
-
-	nav{
-		display: inline-block;
-		border-radius: 0;
-		justify-content: space-around;
+	header{
+		background-color: #0291df;
+		width: auto;
+		height: 435px;
+		display: flex;
+		justify-content: center;
+	}
+	.logo{
+		align-items: center;
+		margin-left: 1em;
+	}
+	.logo img{
+		visibility: visible;
+		width: auto;
+		height: 34px;
 		
+	}
+	nav{
+		min-width: 600px;
+		margin-top: 30px;
+		max-width: 923px;
+		width: 80%;
+		border-radius: 8px;
 		background-color: white;
-
+		justify-content: space-around;
 	}
 	nav h2{ 
 		color: #0291df;
+		font-size: 14px;
+		transition: 0.2s;
 	}
 	/*		Navigation		*/
 	.nav-links{
 		 /* the navigation moves to the top */
-		 position: absolute;
+		 position:relative;
 		 width: auto;
 		 max-width: none;
 		 bottom: auto;
-		 top: 36px;
+		 
 		 background: transparent;
 		 visibility: visible;
 		 box-shadow: none;
@@ -274,8 +301,8 @@ nav-links li{
 	}
 	.nav-links li a {
 		opacity: 1;
-		padding: .4em;
-		margin-left: 1.6em;
+		padding: .3em;
+		margin-left: 1.2em;
 		border-bottom: none;
 	}
 	.nav-links li a:hover {
@@ -363,7 +390,13 @@ nav-links li{
   @media only screen and (min-width: 1024px) {
 	
 	/*		Style		*/
-
+	.nav-links li a {
+		margin-left: 1.6em;
+	}
+	nav h2{
+		font-size: 18px;
+		transition: 0.2s;
+	}
 
 	/*		Navigation		*/
 
