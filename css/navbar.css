@@ -13,6 +13,7 @@ html * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
+
 nav h2{ 
 	color: white;
 }
@@ -48,6 +49,7 @@ nav{
 .logo img{
 	visibility: hidden;
 	margin-right: 5px;
+    margin-left: 3%;
 }
 .nav-links{
 	position: fixed;
@@ -236,10 +238,10 @@ nav-links li{
 @media only screen and (min-width: 640px) {
 	/*		Style		*/
 	header{
+        display: flex;
 		background-color: #0291df;
 		width: auto;
 		height: 435px;
-		display: flex;
 		justify-content: center;
 	}
 	.logo{
@@ -259,7 +261,7 @@ nav-links li{
 		width: 80%;
 		border-radius: 8px;
 		background-color: white;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 	nav h2{ 
 		color: #0291df;
