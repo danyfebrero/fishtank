@@ -1,69 +1,28 @@
-/* ==============================
-             navbar
-================================*/
-
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-*, *:after, *:before{ 
-	/* 	border box for all nav	*/
-	box-sizing: border-box;
+  }
+  
+*:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-nav h2{ 
-	color: white;
-}
-
-nav a {
-	color: #0291df;
-	text-decoration: none;
-	letter-spacing: 2px;
-	font-weight: bold;
-	
-}
-.nav-links a{
-	font-size: 14px;
-	letter-spacing: 2px;
-	font-weight: bold;
-}
-nav{
-    display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50px;
-	background-color: #0291df;
-	border-radius: 0 0 10px 10px;
-	
-}
-.logo{
-	display: flex;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 20px;
-	
-}
-.logo img{
-	visibility: hidden;
-	margin-right: 5px;
-    margin-left: 3%;
-}
-.nav-links{
+nav ul {
+	/* mobile first */
 	position: fixed;
 	width: 90%;
 	max-width: 400px;
 	right: 5%;
 	bottom: 20px;
-	border-radius: 00.25em;
-	box-shadow: 0 0 10px rgba(2, 145, 223, 0.4);
+	border-radius: 0.25em;
+	box-shadow: 0 0 10px rgba(1, 144, 222, 0.4);
 	background: white;
-	visibility: hidden;	/* is hidden until i click on the burger icon*/
-	overflow: hidden; /*	remove this if i do dropbox		*/
-	z-index: 1;	/* makes the menu the top layer element 	*/
-
+	visibility: hidden;
+	/* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
+	overflow: hidden;
+	z-index: 1;
+	/* Force Hardware Acceleration in WebKit */
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-transform: scale(0);
@@ -80,58 +39,55 @@ nav{
 	-moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
 	transition: transform 0.3s, visibility 0s 0.3s;
 }
-nav-links li{
+
+nav ul li {
+	/* Force Hardware Acceleration in WebKit */
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
-.nav-links.is-visible{ /*	if the ul is visible then make it visible */
+nav ul.is-visible {
 	visibility: visible;
 	-webkit-transform: scale(1);
-  	-moz-transform: scale(1);
-  	-ms-transform: scale(1);
-  	-o-transform: scale(1);
-	transform: scale(1); /* original size */
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
 	-webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
 	-moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-	transition: transform 0.3s, visibility 0s 0s; /* animation for showing the ul */
+	transition: transform 0.3s, visibility 0s 0s;
 }
-
-.nav-links.is-visible li:nth-child(1) {
-	/* list items animation home */
+nav ul.is-visible li:nth-child(1) {
+	/* list items animation */
 	-webkit-animation: cd-slide-in 0.2s;
 	-moz-animation: cd-slide-in 0.2s;
 	animation: cd-slide-in 0.2s;
 }
-.nav-links.is-visible li:nth-child(2) {
-	/* list items animation about */
+nav ul.is-visible li:nth-child(2) {
 	-webkit-animation: cd-slide-in 0.3s;
 	-moz-animation: cd-slide-in 0.3s;
 	animation: cd-slide-in 0.3s;
 }
-.nav-links.is-visible li:nth-child(3) {
-	/* list items animation archives */
+nav ul.is-visible li:nth-child(3) {
 	-webkit-animation: cd-slide-in 0.4s;
 	-moz-animation: cd-slide-in 0.4s;
 	animation: cd-slide-in 0.4s;
 }
-.nav-links.is-visible li:nth-child(4) {
-	/* list items animation contact */
+nav ul.is-visible li:nth-child(4) {
 	-webkit-animation: cd-slide-in 0.5s;
 	-moz-animation: cd-slide-in 0.5s;
 	animation: cd-slide-in 0.5s;
 }
-.nav-links li a {
+nav li a {
 	display: block;
 	padding: 1.6em;
 	border-bottom: 1px solid #eff2f6;
 }
-.nav-links li:last-child a {
+nav li:last-child a {
 	border-bottom: none;
 }
 
-.burger{
-	cursor: pointer;
+.fburger{
 	position: fixed;
 	bottom: 20px;
 	right: 5%;
@@ -139,34 +95,34 @@ nav-links li{
 	height: 44px;
 	background: white;
 	border-radius: 0.25em;
-	box-shadow: 0 0 10px rgba(2, 145, 223, 0.4);
- 	/* image replacement */
+	box-shadow: 0 0 10px rgba(1, 144, 222, 0.4);
+	/* image replacement */
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
 	z-index: 2;
 }
-.burger span {
+.fburger span {
 	/* the span element is used to create the menu icon */
 	position: absolute;
 	display: block;
 	width: 20px;
 	height: 2px;
-	background: #0291df;
+	background: rgb(1, 144, 222);
 	top: 50%;
 	margin-top: -1px;
 	left: 50%;
 	margin-left: -10px;
 	-webkit-transition: background 0.3s;
-  	-moz-transition: background 0.3s;
-  	transition: background 0.3s;	
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
 }
-.burger span::before, .burger span::after {
+.fburger span::before, .fburger span::after {
 	content: '';
-  	position: absolute;
-  	left: 0;
-  	background: inherit;
-  	width: 100%;
+	position: absolute;
+	left: 0;
+	background: inherit;
+	width: 100%;
 	height: 100%;
 	/* Force Hardware Acceleration in WebKit */
 	-webkit-transform: translateZ(0);
@@ -180,9 +136,7 @@ nav-links li{
 	-moz-transition: -moz-transform 0.3s, background 0s;
 	transition: transform 0.3s, background 0s;
 }
-
-.burger span::before {
-	/* add one upper span replica*/
+.fburger span::before {
 	top: -6px;
 	-webkit-transform: rotate(0);
 	-moz-transform: rotate(0);
@@ -190,9 +144,7 @@ nav-links li{
 	-o-transform: rotate(0);
 	transform: rotate(0);
 }
-
-.burger span::after{
-	/* add one bottom span replica*/
+.fburger span::after {
 	bottom: -6px;
 	-webkit-transform: rotate(0);
 	-moz-transform: rotate(0);
@@ -200,18 +152,16 @@ nav-links li{
 	-o-transform: rotate(0);
 	transform: rotate(0);
 }
-
-.burger.menu-is-open {
+.fburger.menu-is-open {
 	box-shadow: none;
 }
-.burger.menu-is-open span{ /* hiddes the middle span*/
-	background: rgba(2, 145, 223, 0); ;
+.fburger.menu-is-open span {
+	background: rgba(1, 144, 222, 0);
 }
-.burger.menu-is-open span::before, .burger.menu-is-open span::after {
-	background: #0291df;
+.fburger.menu-is-open span::before, .fburger.menu-is-open span::after {
+	background: rgb(1, 144, 222);
 }
-.burger.menu-is-open span::before {
-	/* animates the burger menu*/
+.fburger.menu-is-open span::before {
 	top: 0;
 	-webkit-transform: rotate(135deg);
 	-moz-transform: rotate(135deg);
@@ -219,8 +169,7 @@ nav-links li{
 	-o-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-
-.burger.menu-is-open span::after {
+.fburger.menu-is-open span::after {
 	bottom: 0;
 	-webkit-transform: rotate(225deg);
 	-moz-transform: rotate(225deg);
@@ -228,108 +177,75 @@ nav-links li{
 	-o-transform: rotate(225deg);
 	transform: rotate(225deg);
 }
-
-
-/* ============================================================
-        				Media Queries
-==============================================================*/
-
-
-@media only screen and (min-width: 640px) {
-	/*		Style		*/
-	header{
-        display: flex;
-		background-color: #0291df;
+@media only screen and (min-width: 589px) {
+	nav ul {
+		/* the navigation moves to the top */
+		position: initial;
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
 		width: auto;
-		height: 435px;
-		justify-content: center;
-	}
-	.logo{
-		align-items: center;
-		margin-left: 1em;
-	}
-	.logo img{
+		max-width: none;
+		bottom: auto;
+		top: 36px;
+		background: transparent;
 		visibility: visible;
-		width: auto;
-		height: 34px;
-		
+		box-shadow: none;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: all 0s;
+		-moz-transition: all 0s;
+		transition: all 0s;
 	}
-	nav{
-		min-width: 600px;
-		margin-top: 30px;
-		max-width: 923px;
-		width: 80%;
-		border-radius: 8px;
-		background-color: white;
-		justify-content: space-between;
-	}
-	nav h2{ 
-		color: #0291df;
-		font-size: 14px;
-		transition: 0.2s;
-	}
-	/*		Navigation		*/
-	.nav-links{
-		 /* the navigation moves to the top */
-		 position:relative;
-		 width: auto;
-		 max-width: none;
-		 bottom: auto;
-		 
-		 background: transparent;
-		 visibility: visible;
-		 box-shadow: none;
-		 -webkit-transform: scale(1);
-		 -moz-transform: scale(1);
-		 -ms-transform: scale(1);
-		 -o-transform: scale(1);
-		 transform: scale(1);
-		 -webkit-transition: all 0s;
-		 -moz-transition: all 0s;
-		 transition: all 0s;
-	}
-	.nav-links li{
+	nav li {
 		display: inline-block;
 	}
-	.nav-links li a {
+	nav li a {
 		opacity: 1;
-		padding: .3em;
-		margin-left: 1.2em;
+		padding: .4em;
 		border-bottom: none;
 	}
-	.nav-links li a:hover {
+	nav li a:hover {
 		color: #fd8444;
 	}
-	.nav-links.is-fixed {
+	nav.is-fixed ul {
 		/* when the user scrolls down, the navigation moves to the bottom right in Fixed position - as on touch devices */
 		position: fixed;
+		display: unset;
 		width: 90%;
 		max-width: 400px;
 		bottom: 20px;
 		top: auto;
 		background: white;
 		visibility: hidden;
-		box-shadow: 0 0 10px rgba(2, 145, 223, 0.4);
+		box-shadow: 0 0 10px rgba(1, 144, 222, 0.4);
 		-webkit-transform: scale(0);
 		-moz-transform: scale(0);
 		-ms-transform: scale(0);
 		-o-transform: scale(0);
 		transform: scale(0);
 	}
-	.nav-links.is-fixed li a{
+	nav.is-fixed ul li {
+		display: block;
+	}
+	nav.is-fixed ul li a {
 		padding: 1.6em;
 		margin-left: 0;
 		border-bottom: 1px solid #eff2f6;
 	}
-	.nav-links.has-transitions {
+	nav ul.has-transitions {
 		/* this class is used to bring back transitions when the navigation moves at the bottom right */
 		-webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
 		-moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
 		transition: transform 0.3s, visibility 0s 0.3s;
 	}
-	.nav-links.is-visible {
+	nav ul.is-visible {
 		/* this class is used to bring back the navigation animation - as on touch devices */
 		visibility: visible;
+		flex-direction: row;
 		-webkit-transform: scale(1);
 		-moz-transform: scale(1);
 		-ms-transform: scale(1);
@@ -339,20 +255,18 @@ nav-links li{
 		-moz-transition: -moz-transform 0.3s, visibility 0s 0s;
 		transition: transform 0.3s, visibility 0s 0s;
 	}
-
-	.nav-links.is-hidden {
-		   /* this class is used to animate the scale down the navigation when the user scrolls down with the navigation still open */
-		   -webkit-transform: scale(0);
-		   -moz-transform: scale(0);
-		   -ms-transform: scale(0);
-		   -o-transform: scale(0);
-		   transform: scale(0);
-		   -webkit-transition: -webkit-transform 0.3s;
-		   -moz-transition: -moz-transform 0.3s;
-		   transition: transform 0.3s;
+	nav ul.is-hidden {
+		/* this class is used to animate the scale down the navigation when the user scrolls down with the navigation still open */
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-ms-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+		-webkit-transition: -webkit-transform 0.3s;
+		-moz-transition: -moz-transform 0.3s;
+		transition: transform 0.3s;
 	}
-
-	.burger{
+	.fburger {
 		/* the the menu triger is hidden by default on desktop devices */
 		visibility: hidden;
 		-webkit-transform: scale(0);
@@ -364,7 +278,7 @@ nav-links li{
 		-moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
 		transition: transform 0.3s, visibility 0s 0.3s;
 	}
-	.is-fixed .burger{
+	.is-fixed .fburger {
 		visibility: visible;
 		-webkit-transition: all 0s;
 		-moz-transition: all 0s;
@@ -377,105 +291,5 @@ nav-links li{
 		-webkit-animation: cd-bounce-in 0.3s linear;
 		-moz-animation: cd-bounce-in 0.3s linear;
 		animation: cd-bounce-in 0.3s linear;
-	}
-}
-  @media only screen and (min-width: 1024px) {
-	
-	/*		Style		*/
-	.nav-links li a {
-		margin-left: 1.6em;
-	}
-	nav h2{
-		font-size: 18px;
-		transition: 0.2s;
-	}
-
-	/*		Navigation		*/
-
-  }
-  @-webkit-keyframes cd-slide-in {
-	0% {
-	  -webkit-transform: translateX(100px);
-	}
-  
-	100% {
-	  -webkit-transform: translateY(0);
-	}
-  }
-  @-moz-keyframes cd-slide-in {
-	0% {
-	  -moz-transform: translateX(100px);
-	}
-  
-	100% {
-	  -moz-transform: translateY(0);
-	}
-  }
-  @keyframes cd-slide-in {
-	0% {
-	  -webkit-transform: translateX(100px);
-	  -moz-transform: translateX(100px);
-	  -ms-transform: translateX(100px);
-	  -o-transform: translateX(100px);
-	  transform: translateX(100px);
-	}
-  
-	100% {
-	  -webkit-transform: translateY(0);
-	  -moz-transform: translateY(0);
-	  -ms-transform: translateY(0);
-	  -o-transform: translateY(0);
-	  transform: translateY(0);
-	}
-  }
-  @-webkit-keyframes cd-bounce-in {
-	0% {
-	  -webkit-transform: scale(0);
-	}
-  
-	60% {
-	  -webkit-transform: scale(1.2);
-	}
-  
-	100% {
-	  -webkit-transform: scale(1);
-	}
-  }
-  @-moz-keyframes cd-bounce-in {
-	0% {
-	  -moz-transform: scale(0);
-	}
-  
-	60% {
-	  -moz-transform: scale(1.2);
-	}
-  
-	100% {
-	  -moz-transform: scale(1);
-	}
-  }
-  @keyframes cd-bounce-in {
-	0% {
-	  -webkit-transform: scale(0);
-	  -moz-transform: scale(0);
-	  -ms-transform: scale(0);
-	  -o-transform: scale(0);
-	  transform: scale(0);
-	}
-  
-	60% {
-	  -webkit-transform: scale(1.2);
-	  -moz-transform: scale(1.2);
-	  -ms-transform: scale(1.2);
-	  -o-transform: scale(1.2);
-	  transform: scale(1.2);
-	}
-  
-	100% {
-	  -webkit-transform: scale(1);
-	  -moz-transform: scale(1);
-	  -ms-transform: scale(1);
-	  -o-transform: scale(1);
-	  transform: scale(1);
 	}
 }
