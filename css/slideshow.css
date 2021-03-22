@@ -30,7 +30,16 @@
 	width: 100%;
 }
 .slide-button{
+	color: lightskyblue;
 	position: absolute;
-	top 32%
-	transform: translatey(-50px) ;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 4em;
+	padding: 0;
+}
+.slide-button-left{
+	left: -60px;
+}
+.slide-button:hover{
+	color: orange;
 }

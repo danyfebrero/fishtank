@@ -225,13 +225,7 @@ main ul{
     border-radius: 0.35em;
     margin-top: auto;
 }
-.material-icons{
-    font-size: 4em;
-    color: red;
-}
-.material-icons:hover{
-    color:var(--myorange);
-}
+
 @media (min-width: 589px) {
     .container{
         background-image: url(../img/background.jpg);
