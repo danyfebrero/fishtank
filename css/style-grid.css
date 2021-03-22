@@ -12,6 +12,7 @@ a{
 :root{
     --bluecolor :#0291df;
     --lightblue :#36c5f5;
+    --myorange :#fd8444;
     --screenwidth: 800px;
 } 
 body {
@@ -90,7 +91,7 @@ header{
 .banner button{
     padding: 5px 10px;
     margin: auto;
-    background-color: #fd8444;
+    background-color:var(--myorange);
     border-style:none;
     border-radius: .35em;
     color: white;
@@ -111,13 +112,11 @@ button a{
     margin: 0;
     padding: 0;
 }
-.slideshow{
-    background-color: #19aae2;
-}
 aside {
     background-color: var(--lightblue); 
+    grid-area: aside;
 }
-aside h2 {
+.slideshow h2 {
     text-align: center;
 }
 footer {
@@ -127,6 +126,9 @@ footer {
     text-align: center;
     font-size: .8rem;
     padding: 15px;
+    max-width: 1020px;
+    margin: auto;
+    margin-top: 0;
 }
 .container {
     background-image: url(../img/background1.jpg);
@@ -169,8 +171,23 @@ main ul{
 .slideshow{
     grid-area: slideshow;
 }
-aside{
-    grid-area: aside;
+
+.relatedArticles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 10px;
+    margin: 2em auto;
+    margin: 0;
+    padding: 10px;
+}
+.relatedcontainer{
+    max-width: 940px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    background-color: var(--bluecolor);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .articles{
     display: flex;
@@ -195,6 +212,9 @@ aside{
 .articles p {
     font-size: 0.9rem;
 }
+.more{
+    background-color: white;
+}
 .btn {
     font-size: 0.85em;
     color: #fff;
@@ -204,6 +224,13 @@ aside{
     background-color: var(--bluecolor);
     border-radius: 0.35em;
     margin-top: auto;
+}
+.material-icons{
+    font-size: 4em;
+    color: red;
+}
+.material-icons:hover{
+    color:var(--myorange);
 }
 @media (min-width: 589px) {
     .container{
@@ -284,7 +311,7 @@ aside{
         position: absolute;
     }
     .banner button{
-        background-color: #fd8444;
+        background-color:var(--myorange);
     }
 }
 @media (min-width: 992px) {

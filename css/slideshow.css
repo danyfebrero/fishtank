@@ -1,0 +1,36 @@
+/* ============================================================
+        Base element styles
+============================================================*/
+.slideshow{
+	position: relative;
+	height: 400px;
+	width: 80%;
+	margin: 0 auto;
+}
+.slideshow-img{
+	width: 80%; /*set the size of the slideshow img*/
+	height: 80%;
+	object-fit: cover;
+}
+.slideshow-track-conatiner{
+	position: relative;
+	background-color: lightgreen;
+
+	height: 100%;
+}
+.slideshow-track{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.slides{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+.slide-button{
+	position: absolute;
+	top 32%
+	transform: translatey(-50px) ;
+}
