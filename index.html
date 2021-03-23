@@ -4,66 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fish Tank Hobby</title>
-    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="css/base.css"> <!-- CSS style-->
-    <link rel="stylesheet" href="css/navbar.css"> <!-- flexbox -->
-    <script src="js/app.js"></script>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- icons -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style-grid.css"> <!-- CSS style-->
+    <link rel="stylesheet" href="css/navbar.css"> <!--floating nav bar-->
+    <link rel="stylesheet" href="css/slideshow.css"> <!--floating nav bar-->
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
-
 </head>
 <body>
-
-    <header> <!--main header -->
-        <nav>
-            <div class="logo">
-                <img src="img/logo 1x.png" alt="betta logo">
-                <a href="#"><h2>Fish Tank Hobby</h2></a> 
-            </div>
-            <ul class="nav-links"> 
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="archives.html">Archives</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            </div>
-            <div class="burger">
-                <a href="#0" class="fburger">Menu<span></span></a>
-            </div>
-        </nav>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="betta fish logo">
+                    <a href="index.html">Fish Tank Hobby</a>
+                </div>
+                <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="archives.html">Archives</a></li>
+                  <li><a href="contact.html">Write for us</a></li>
+                </ul>
+                <div class="burger">
+                  <a href="#0" class="fburger">Menu<span></span></a>
+                </div>
+            </nav>
+        </header>
         <div class="banner">
-            <img class="bannerPic" src="img/bannerpic.jpg" alt="fish">
+            <img class="bannerPic" src="img/betta.png" alt="betta fish">
+            <img class="bannerPicLarge" src="img/Beauty-of-Betta.png" alt="betta fish">
             <div>
-                <p>Text of the banner</p>
-                <p>button</p>
+                <p>Taking care of your fish should be Easy!</p>
+                <p>Helping aquarium lovers take better care of their tanks</p>
+                <button><a href="archives.html">Start Here</a></button>
             </div>
         </div>
-    </header>
-
-    <main>
-        <div>
-            <ul class="basicsArticles">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                <li>5</li>
-            </ul>
+        <main>
+            <div class="articleContainer">
+                <h1>Home Aquarium Guides</h1>
+                <ul class="basicArticles">
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/bowlicon.png" alt="#">
+                            <div>
+                                <h3>Basics</h3>
+                                <p>Hopefully the information you gain from reading this website
+                                    will help your fish live longer, healthier, and happier lives!</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/tankicon.png" alt="#">
+                            <div>
+                                <h3>Setting up your Aquarium</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/newtankicon.png" alt="#">
+                            <div>
+                                <h3>Cicling your aquarium</h3> 
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/bagicon.png" alt="#">
+                            <div>
+                                <h3>Adding fish</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/mantlicon.png" alt="#">
+                            <div>
+                                <h3>Aquarium maintenance</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                    <li class="articles">
+                        <a href="">
+                            <img src="img/allicon.png" alt="#">
+                            <div>
+                                <h3>More articles</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                            </div>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="slideshow">
+            <i class="material-icons slide-button slideshow-button-left is-hidden">keyboard_arrow_left</i>
+            <div class="relatedcontainer slideshow-track-container">
+                <h2>Related Articles</h2>
+                 
+                <ul class="slideshow-track">
+                    <li class="slides current-slide">
+                        <div class="slideshow-div">
+                            <a href="">
+                                <img src="img/bowlicon.png" alt="#">
+                                <h3>Deciding on your first fish</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                                <span class="btn">Read more</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="slides">
+                        <div class="slideshow-div">
+                            <a href="">
+                                <img src="img/bowlicon.png" alt="#">
+                                <h3>Aclimation procedures</h3> 
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                                <span class="btn">Read more</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="slides">
+                        <div class="slideshow-div">
+                            <a href="">
+                                <img src="img/bowlicon.png" alt="#">
+                                <h3>Essencial nutrients for the planted aquarium</h3> 
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                                <span class="btn">Read more</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="slides">
+                        <div class="slideshow-div">
+                            <a href="">
+                                <img src="img/bowlicon.png" alt="#">
+                                <h3>Recommended products</h3>
+                                <p>No matter what type of Aquarium you are 
+                                planning to set up, the fish tank is the foundation.</p>
+                                <span class="btn">Read more</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <i class="material-icons slide-button slideshow-button-right">keyboard_arrow_right</i>
+            <div class="slideshow-nav">
+                <button class="slides-indicator current-slide"></button>
+                <button class="slides-indicator"></button>
+                <button class="slides-indicator"></button>
+                <button class="slides-indicator"></button>
+            </div> 
         </div>
-        <div>
-            <ul class="relatedArticles">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
-        </div>
-    </main>
+        <aside>
 
-    <footer class="main-footer">
-
-    </footer>
+        </aside>
+        <footer>
+            <div class="footer-container">
+                <p class="disclaimer">DISCLAIMER</p>
+                <p class="footer-more">The information contained on Fishtankhobby.com is for general information 
+                    and/or entertainment purposes only. Fishtankhobby.com does not intend to
+                    provide any kind of veterinary recommendation or advice. The content of
+                    this website is not meant to be a substitute for professional 
+                    veterinary advice. Remember to always ask a veterinarian for help 
+                    regarding all of your pets.
+                </p>
+                <p class="copyright">COPYRIGHT FISHTANKHOBBY @ 2021. <br> ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/slideshow.js"></script>
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/main.js"></script> <!-- Resource jQuery -->
-</body>
+  </body>
 </html>

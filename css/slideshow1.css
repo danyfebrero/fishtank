@@ -1,52 +1,45 @@
-.relatedcontainer{
-    max-width: 940px;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: rgb(85, 85, 85);;
-}
+/* ============================================================
+        slideshow styles
+============================================================*/
 .slideshow{
 	position: relative;
-	height: 510px;
+	height: 400px;
 	min-width: 280px;
 	width: 80%;
 	max-width: 520px;
 	margin: 0 auto;
 }
 .slideshow-div{
-    width: 100%; /*set the size of the slideshow img*/
+	width: 100%; /*set the size of the slideshow img*/
 	height: 100%;
-    object-fit: cover;
+	object-fit: cover;
+	
 }
 .slideshow-track-container{
 	position: relative;
+	border: 1px solid #e1e1e1;;
 	height: 100%;
 	overflow: hidden;
 	max-width: 500px;
 	margin: auto;
-    
 }
 .slideshow-track{
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 	margin: 0;
 	position: relative;
 	height: 100%;
 	transition: transform 250ms ease-in;
 }
 .slides{
-    position: absolute;
+	position: absolute;
 	top: 0;
 	bottom: 0;
 	width: 100%;
 }
 .slide-button{
 	color: lightskyblue;
-    position: absolute;
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%); /*change the position of the bottons to exacly the middle*/
 	font-size: 3em;
@@ -60,13 +53,15 @@
 .slideshow-button-right{
 	right: -50px;
 }
+
 .slide-button:hover{
 	color: orange;
 }
 .slideshow-nav{
+	
 	display: flex;
 	justify-content: center;
-	padding: 1px 0;
+	padding: 10px 0;
 
 }
 .slides-indicator{
@@ -85,14 +80,12 @@
 	display: none;
 }
 .slideshow-div a{
-	color: rgb(85, 85, 85);
-    border: 1px solid #e1e1e1;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
-	padding: 5% 5%;
+	padding: 0 5%;
 	text-decoration: none;
+	color: rgb(85, 85, 85);
+	
 }
-
-

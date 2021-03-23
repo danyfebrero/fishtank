@@ -5,34 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- icons -->
-    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/slideshow1.css">
     <title>Document</title>
 </head>
 <body>
     <div class="slideshow">
-        <i class="material-icons slide-button slideshow-button-left">keyboard_arrow_left</i>
-        <div class="slideshow-track-conatiner">
+        <i class="material-icons slide-button slideshow-button-left is-hidden">keyboard_arrow_left</i>
+        <div class="slideshow-track-container">
             <ul class="slideshow-track">
-                <li class="slides">
-                    <img class="slideshow-img" src="img/bowlicon.png" alt="">
+                <li class="slides current-slide">
+                    <div class="slideshow-div">
+                        <a href="">
+                            <img src="img/bowlicon.png" alt="#">
+                            <h3>Deciding on your first fish</h3>
+                            <p>No matter what type of Aquarium you are 
+                            planning to set up, the fish tank is the foundation.</p>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </div>
                 </li>
                 <li class="slides">
-                    <img class="slideshow-img" src="img/bowlicon.png" alt="">
+                    <div class="slideshow-div">
+                        <a href="">
+                            <img src="img/bowlicon.png" alt="#">
+                            <h3>Aclimation procedures</h3> 
+                            <p>No matter what type of Aquarium you are 
+                            planning to set up, the fish tank is the foundation.</p>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </div>
                 </li>
                 <li class="slides">
-                    <img class="slideshow-img" src="img/bowlicon.png" alt="">
+                    <div class="slideshow-div">
+                        <a href="">
+                            <img src="img/bowlicon.png" alt="#">
+                            <h3>Essencial nutrients for the planted aquarium</h3> 
+                            <p>No matter what type of Aquarium you are 
+                            planning to set up, the fish tank is the foundation.</p>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </div>
                 </li>
                 <li class="slides">
-                    <img class="slideshow-img" src="img/bowlicon.png" alt="">
+                    <div class="slideshow-div">
+                        <a href="">
+                            <img src="img/bowlicon.png" alt="#">
+                            <h3>Recommended products</h3>
+                            <p>No matter what type of Aquarium you are 
+                            planning to set up, the fish tank is the foundation.</p>
+                            <span class="btn">Read more</span>
+                        </a>
+                    </div>
                 </li>
             </ul>
         </div>
         <i class="material-icons slide-button slideshow-button-right">keyboard_arrow_right</i>
         <div class="slideshow-nav">
-            <button class="slides-indicator"></button>
+            <button class="slides-indicator current-slide"></button>
             <button class="slides-indicator"></button>
             <button class="slides-indicator"></button>
             <button class="slides-indicator"></button>
         </div>
+        <script src="js/slideshow.js"></script>
 </body>
 </html>

@@ -112,6 +112,9 @@ button a{
     margin: 0;
     padding: 0;
 }
+.articles a div{
+    height: auto;
+}
 aside {
     background-color: var(--lightblue); 
     grid-area: aside;
@@ -124,11 +127,11 @@ footer {
     background-color: #0190de;
     color: white;
     text-align: center;
-    font-size: .8rem;
+    font-size: .7rem;
     padding: 15px;
     max-width: 1020px;
     margin: auto;
-    margin-top: 0;
+    margin-top:50px;
 }
 .container {
     background-image: url(../img/background1.jpg);
@@ -180,15 +183,7 @@ main ul{
     margin: 0;
     padding: 10px;
 }
-.relatedcontainer{
-    max-width: 940px;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: 40px;
-    background-color: var(--bluecolor);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 .articles{
     display: flex;
     flex-direction: row;
@@ -225,6 +220,13 @@ main ul{
     border-radius: 0.35em;
     margin-top: auto;
 }
+.disclaimer{
+    border-top: solid 1px rgba(255, 255, 255, 0.80);
+    padding-top: 5px;
+}
+.copyright{
+    margin-top: 40px;
+}
 
 @media (min-width: 589px) {
     .container{
@@ -259,12 +261,6 @@ main ul{
         justify-content: space-around;
         padding: 0px 15px ;
     }
-    /*nav ul{
-        visibility: visible;
-        position: unset;
-        flex-grow: 1;
-        justify-content: flex-end;
-    }*/
     nav ul li{
         padding-left: 15px;
     }
@@ -306,6 +302,9 @@ main ul{
     }
     .banner button{
         background-color:var(--myorange);
+    }
+    .footer-container{
+        padding: 0 20%;
     }
 }
 @media (min-width: 992px) {
