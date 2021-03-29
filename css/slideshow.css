@@ -11,7 +11,7 @@
 }
 .slideshow{
 	position: relative;
-	height: 510px;
+	height: 550px;
 	min-width: 280px;
 	width: 80%;
 	max-width: 520px;
@@ -21,6 +21,10 @@
     width: 100%; /*set the size of the slideshow img*/
 	height: 100%;
     object-fit: cover;
+}
+.slideshow-div img{
+	border-radius: 8px;
+	box-shadow: 0 3px 4px rgba(104, 104, 104, .5);
 }
 .slideshow-track-container{
 	position: relative;
@@ -64,6 +68,7 @@
 	color: orange;
 }
 .slideshow-nav{
+
 	display: flex;
 	justify-content: center;
 	padding: 1px 0;
@@ -88,11 +93,16 @@
 	color: rgb(85, 85, 85);
     border: 1px solid #e1e1e1;
 	display: flex;
+	height: auto;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
 	padding: 5% 5%;
 	text-decoration: none;
 }
-
-
+.slideshow-div a h3 {
+	height: 54px;
+}
+.slideshow-div a p {
+	height: 54px;
+}

@@ -43,8 +43,55 @@ main img{
     height: auto;
     padding: 20px;
 }
+.colored-background{
+    background-color: var(--myblue);
+    color: white;
+    padding: 10%;
+    font-size: .9rem;
+    margin: 0 5%;
+    min-width: 267px;
+    box-shadow: 0 3px 5px rgba(104, 104, 104, .5);
+    text-align: center;
+
+}
+.remove-center{
+    text-align: left;
+}
+.centered{
+    text-align: center;
+}
+.imgfix{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ul li{
+    text-align: left;
+}
 @media (min-width: 589px) {
     main{
     margin-top: 4rem;
     }
+    .colored-background{
+        padding: 5%;
+        font-size: 1rem;
+        margin: 5%;
+    
+    }
+    .imgfix{
+        width: 70%;
+    }
+
+}
+@media (min-width: 992px) {
+    .intro{
+        display: flex;
+        align-items: center;
+
+    }
+    .intro img{
+        width:60%;
+        height: 60%;
+    }    
 }

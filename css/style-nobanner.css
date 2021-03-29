@@ -155,8 +155,15 @@ main{
 .imageContainer{
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
     
 }
+.imageContainer img{
+
+    border-radius: 8px;
+    box-shadow:0 3px 5px rgba(104, 104, 104, .5);
+}
+
 .icons{
     display: flex;
     align-items: center;
@@ -194,6 +201,10 @@ main{
         "slideshow slideshow slideshow"
         "aside aside aside"
         "footer footer footer";
+    }
+    .imageContainer img{
+        width: 250px;
+        height: auto;
     }
     header{
         background-color: unset;

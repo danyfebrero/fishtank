@@ -115,6 +115,9 @@ button a{
 .articles a div{
     height: auto;
 }
+.articles a div p{
+     min-height: 65px;
+}
 aside {
     background-color: var(--lightblue); 
     grid-area: aside;
@@ -193,6 +196,8 @@ main ul{
     border-radius: 0.25em;
 }
 .articles img{
+    border-radius: 8px;
+    box-shadow:0 3px 5px rgba(104, 104, 104, .5);
     width: 90px;
     height: auto;
 }
@@ -228,6 +233,7 @@ main ul{
 .copyright{
     margin-top: 40px;
 }
+
 @media (min-width: 589px) {
     .container{
         background-image: url(../img/background.jpg);
