@@ -161,7 +161,7 @@ nav li:last-child a {
 .fburger.menu-is-open span::before, .fburger.menu-is-open span::after {
 	background: rgb(1, 144, 222);
 }
-.fburger.menu-is-open span::before {
+.fburger.menu-is-open span::before {	/*	animation	*/
 	top: 0;
 	-webkit-transform: rotate(135deg);
 	-moz-transform: rotate(135deg);
@@ -169,7 +169,7 @@ nav li:last-child a {
 	-o-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-.fburger.menu-is-open span::after {
+.fburger.menu-is-open span::after {		/*	animation	*/
 	bottom: 0;
 	-webkit-transform: rotate(225deg);
 	-moz-transform: rotate(225deg);
